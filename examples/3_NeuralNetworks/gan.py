@@ -40,7 +40,7 @@ gen_hidden_dim = 256
 disc_hidden_dim = 256
 noise_dim = 100 # Noise data points
 
-# A custom initialization (see Xavier Glorot init)
+# A custom initialization (see Xavier Glorot init) 就是根据每层的输入个数和输出个数来决定参数随机初始化的分布范围
 def glorot_init(shape):
     return tf.random_normal(shape=shape, stddev=1. / tf.sqrt(shape[0] / 2.))
 
